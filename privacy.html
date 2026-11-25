@@ -20,6 +20,7 @@ h1{font-size:28px;line-height:1.3;margin:0 0 6px}h2{font-size:19px;margin:36px 0
 <p>사용자가 만든 워크스페이스(카드로 띄운 페이지 주소, 메모, 그림, 배치)는 브라우저의 로컬 저장소에 저장됩니다. 사용자가 ‘구글 드라이브에 연결’을 선택한 경우에만, 같은 내용이 Google Drive API를 통해 사용자 본인 드라이브의 앱 전용 폴더에 저장됩니다. 앱은 드라이브의 다른 파일에 접근하지 않습니다.</p>
 <p>사용자가 주소 추천을 허용하면 방문 기록, 자주 방문한 사이트, 북마크를 기기 안에서만 읽어 추천 목록을 만듭니다. 이 정보는 저장하거나 어디로도 보내지 않습니다.</p>
 <p>사용자가 허용한 사이트에 한해, 페이지를 카드 안에 표시하기 위해 앱의 탭에서 열리는 그 사이트 프레임의 일부 응답 헤더(X-Frame-Options, CSP frame-ancestors)를 제거합니다. 페이지 내용은 읽거나 보내지 않습니다.</p>
+<p>‘카드 안 로그인 도우미’가 켜져 있으면(기본으로 켜져 있고 메뉴에서 끌 수 있습니다), 사용자가 허용한 사이트가 카드 안에 보일 때 그 사이트 자신의 쿠키(HttpOnly 쿠키는 제외)를 브라우저 안에서 그 페이지에 건네고, 페이지가 쓰는 쿠키를 브라우저에 저장합니다. 일반 탭에서와 같은 동작이며, 쿠키는 앱 밖 어디로도 보내지 않습니다. 사용자가 연 내 컴퓨터 폴더의 파일 목록도 기기 안에서만 읽어 보여 줍니다.</p>
 <h2>구글 사용자 데이터</h2>
 <p>앱이 Google API로부터 받은 정보의 사용과 전송은 Limited Use 요건을 포함한 Google API Services User Data Policy를 따릅니다. 앱은 drive.appdata 범위만 요청하며, 그 데이터는 사용자의 워크스페이스를 동기화하는 데만 씁니다. 광고, 판매, 분석에 쓰지 않습니다.</p>
 <h2>삭제</h2>
@@ -34,6 +35,7 @@ h1{font-size:28px;line-height:1.3;margin:0 0 6px}h2{font-size:19px;margin:36px 0
 <p>Your workspaces (addresses of pages shown as cards, notes, drawings and layout) are saved in your browser’s local storage. Only if you choose “Connect Google Drive” is the same content saved, through the Google Drive API, in a private app folder in your own Drive. The app does not access any other files in your Drive.</p>
 <p>If you allow address suggestions, the app reads your browsing history, top sites and bookmarks on your device only, to suggest addresses. This information is not stored or sent anywhere.</p>
 <p>For sites you allow, the app removes certain response headers (X-Frame-Options, CSP frame-ancestors) from that site’s frames inside the app’s own tab, so the page can be shown in a card. Page content is not read or sent.</p>
+<p>When the “sign-in helper in cards” is on (it is on by default and can be turned off in the menu), a site you allowed that is shown in a card gets its own cookies (never HttpOnly ones) from the browser, and cookies the page writes are saved in the browser, just as in a normal tab. Cookies are never sent anywhere outside the app. File lists of folders on your computer that you open are also read on your device only.</p>
 <h2>Google user data</h2>
 <p>The app’s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. The app requests only the drive.appdata scope and uses it only to sync your workspaces. It is never used for advertising, sold, or used for analytics.</p>
 <h2>Deletion</h2>
